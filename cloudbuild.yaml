@@ -1,5 +1,1 @@
-steps:
-  # Run tests and save to file
-  - name: golang
-    entrypoint: /bin/bash
-   
+runtime: go115 
