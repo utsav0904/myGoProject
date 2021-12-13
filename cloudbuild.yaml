@@ -1,0 +1,6 @@
+steps:
+# Pull the latest gcloud image.
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['pull', 'gcr.io/cloud-builders/gcloud']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/git', '.']
