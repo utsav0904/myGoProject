@@ -27,5 +27,10 @@ func main() {
 	r.HandleFunc("/products/purchase", ProductController.BuyProductMany).Methods("POST")
 	r.HandleFunc("/transactions/all", ProductController.GetAllTransactions).Methods("GET")
 	r.HandleFunc("/transactions/top5", ProductController.GetTop5Products).Methods("GET")
-	log.Fatal(http.ListenAndServe(":8080", r))
+	//log.Fatal(http.ListenAndServe(":8080", r))
+	port := os.Getenv("PORT")
+	if port == "" {
+        	port = "8080"
+	}
+	log.Fatal(http.ListenAndServe(":port", r))
 }
