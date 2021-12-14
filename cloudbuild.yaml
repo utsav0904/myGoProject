@@ -1,5 +1,4 @@
 steps:
-  - id: your_step_here
-    name: "gcr.io/cloud-builders/go"
-    args: ["run"]
-    env: ["GOPATH=."]
+  # Run tests and save to file
+  - name: golang
+    entrypoint: /bin/bash
